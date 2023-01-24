@@ -1,0 +1,18 @@
+<!-- transactionForm.html -->
+{{template "navigation"}}
+{{if .Success}}
+    <h1>Transaction added!</h1>
+{{else}}
+    <h1>Add a Transaction</h1>
+    <form method="POST">
+        <label>Trade:</label><br />
+        <input type="text" name="tradeid"><br />
+        <label>Price:</label><br />
+        <input type="text" name="price"><br />
+        <label>Amount:</label><br />
+        <input type="text" name="amount"><br />
+        <label>Costs:</label><br />
+        <input type="text" name="costs"><br />
+        <input type="submit" value="Save">
+    </form>
+{{end}}

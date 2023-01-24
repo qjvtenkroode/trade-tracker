@@ -1,0 +1,15 @@
+<!-- index.html -->
+<h1>Trade ledger</h1>
+{{template "navigation" . }}
+<ul>
+    {{range .}}
+    <li>{{.ID}} - {{.Name}}<br /> 
+        <ul>
+            {{range .Transactions}}
+            <li>{{.ID}} - {{.Price}} - {{.Amount}} - {{.Costs}}</li>
+            {{end}}
+        </ul>
+    </li>
+    {{end}}
+</ul>
+
